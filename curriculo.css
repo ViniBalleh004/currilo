@@ -1,40 +1,148 @@
-body{
-    background:linear-gradient(180deg, black, grey);
+/* Reset básico e tipografia */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-header{
+body {
+    background: linear-gradient(180deg, #1a1a1a, #4a4a4a);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
     text-align: center;
-    background: linear-gradient(180deg, black, grey);
-    margin: 0;
-    padding: 10px;
-    color: white;
-    border-radius: 8ps;
-}img{
+    background: linear-gradient(180deg, #111, #333);
+    padding: 2rem 1rem;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 10px solid whitesmoke;
+    border: 5px solid #fff;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-section{
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    background-color: gray;
-    box-shadow: 0 0 20px rgba(0, 0, 1, 1);
-}h3{
-    color: whitesmoke;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+/* Seções */
+section {
+    margin: 1.5rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    color: #222;
     font-size: 1.8rem;
-}li{
-    color: #000000;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: #333;
     font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-footer{
-    color: white;
-    background-color: black;
+li::before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+    background: #111;
+    color: #fff;
     text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    header img {
+        width: 120px;
+        height: 120px;
+    }
 
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
